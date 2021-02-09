@@ -28,7 +28,7 @@ public class Controller implements RequestStreamHandler {
                 JsonObject queryStringParameters = gson.fromJson(event.get("queryStringParameters").toString(), JsonObject.class);
                 if (queryStringParameters.get("zoomLevel") != null) {
 
-                    int zoomLevel = Integer.parseInt(queryStringParameters.get("id").toString());
+                    int zoomLevel = Integer.parseInt(queryStringParameters.get("zoomLevel").toString());
                     String outputUrl = String.format(
                             "https://www.google.com/maps/@35.1500099,-122.2394121,%dz",
                             zoomLevel
